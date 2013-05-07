@@ -4,7 +4,7 @@ This a sample website of PyPuzzle(a Python module based on libpuzzle).
 
 It illustrate how to:
 
-1. build the SQL schema.
+1. build the SQL schema and how to index millions of images.
 
 1. find a similar image from database quickly.
 
@@ -16,4 +16,4 @@ It illustrate how to:
 ## TODO
 
 1. manage dependences with virtualenv.
-2. search by description.
+(done) 2. search by description.
