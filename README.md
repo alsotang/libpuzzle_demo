@@ -1,4 +1,4 @@
-# Puzzle Project
+# libpuzzle DEMO
 
 This a sample website of PyPuzzle(a Python module based on libpuzzle).
 
@@ -17,4 +17,4 @@ It illustrate how to:
 ## TODO
 
 1. manage dependences with virtualenv.
-(done) 2. search by description.
+2. search by description. (done)
