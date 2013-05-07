@@ -10,8 +10,9 @@ It illustrate how to:
 
 ## How to use:
 
-1. xxx
-2. xxx
+1. `$ sqlite3 db/puzzle.db`.
+1. `$ python init_db.py`.
+1. `$ python app.py` and open '127.0.0.1:5000' in browser.
 
 ## TODO
 
