@@ -76,7 +76,7 @@ def search_images(request):
         temp.flush()
 
         vec_str = ''.join(map(lambda n: str(n), puzzle.get_cvec_from_file(temp.name)))
-        vec_strs = [("%s__%s" % (i, vec_str[i: 100+i])) for i in range(100)]
+        vec_strs = [("%s__%s" % (i, vec_str[i: 10+i])) for i in range(100)]
 
         place_holder = '?'
         place_holders = ','.join(len(vec_strs)*[place_holder])

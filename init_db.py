@@ -1,3 +1,5 @@
+# coding: utf-8
+
 import os
 
 import pypuzzle
@@ -14,6 +16,8 @@ conn.row_factory = sqlite3.Row
 cur = conn.cursor()
 
 for image_name in os.listdir(PUZZLE_IMAGE_DIR):
+    if not image_name.endswith('.jpg'): continue
+
     image_path = os.path.join(PUZZLE_IMAGE_DIR, image_name)
     vec = puzzle.get_cvec_from_file(image_path)
     vec_str = ''.join([str(i) for i in vec])
@@ -29,7 +33,7 @@ for image_name in os.listdir(PUZZLE_IMAGE_DIR):
     conn.executemany('insert into \
                      img_sig_words (image_id, sig_word) \
                      values (?, ?)',
-                     [(image_id, ("%s__%s" % (i, vec_str[i: 100+i]))) for i in range(100)]
+                     [(image_id, ("%s__%s" % (i, vec_str[i: 10+i]))) for i in range(100)]
                      )
 
     conn.commit()
