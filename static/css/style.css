@@ -1,0 +1,60 @@
+body {
+  background: url(/static/img/diamond_upholstery.png) repeat 0 0;
+}
+
+.image_div {
+  background: #FFF;
+  text-align: center;
+  margin: 10px;
+}
+
+.puzzle_thumb {
+  width: 200px;
+}
+
+/* Customize the navbar links to be fill the entire space of the .navbar */
+.navbar .navbar-inner {
+  padding: 0;
+}
+.navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+.navbar .nav li {
+  display: table-cell;
+  width: 1%;
+  float: none;
+}
+.navbar .nav li a {
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+.navbar .nav li:first-child a {
+  border-left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+
+
+#footer {
+  clear: both;
+}
+
+.double_border {
+    border: 1px solid #bbb;     /*外边框尺寸和颜色*/
+    padding: 5px;       /*内边框尺寸*/
+    background: #ddd;   /*内边框颜色*/
+}
+
+.image_name, .image_description {
+  margin: 5px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}

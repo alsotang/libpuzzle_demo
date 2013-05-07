@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <h3>{{result_title}}</h3>
+    {% for image in result_images %}
+      <div class='thumbnail span3 image_div'>
+        <img src="{{image['file_path']}}" alt="" class="puzzle_thumb img-polaroid">
+        <p class='image_name'>文件名：{{image['name']}}</p>
+        <p class='image_description'>描述：{{ image['description'] }}</p>
+      </div>
+    {% else %}
+      <p> There is no images!</p>
+    {% endfor %}
+
+{% endblock %}

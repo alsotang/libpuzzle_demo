@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% block title %}Welcome{% endblock %} | Puzzle Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('about')}}">About</a></li>
+        </ul>
+        <a href="{{url_for('index')}}"><h2 class="muted">Puzzle Project</h2></a>
+      </div>
+
+      {% with flashes = get_flashed_messages() %}
+        {% if flashes %}
+          <ul class="flashes">
+          {% for message in flashes %}
+            <li>{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+
+      <hr />
+
+      <h3>Search</h3>
+
+      <form id="upload_form" method="post"
+        action="{{url_for('search')}}" enctype="multipart/form-data">
+
+        <input id="upload_box" name="image"
+          title="Upload an image" type="file" class="btn"/>
+        <span> OR </span>
+        <input type="text" name='search_text' id='search_text' />
+        <input id="file_submit" value="Search" type="submit" class="btn btn-info" />
+      </form>
+
+      <hr />
+
+      <div class="body">
+      {% block body %}
+      {% endblock %}
+      </div>
+
+
+      <div id="footer">
+        <hr />
+        <p>&copy; Puzzle Project &mdash; A PyPuzzle Demo</p>
+      </div>
+    </div>
+  </body>
+</html>
